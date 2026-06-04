@@ -1,0 +1,9 @@
+bin/
+obj/
+DataProtectionKeys/
+.vs/
+*.user
+*.db
+*.db-shm
+*.db-wal
+*.log

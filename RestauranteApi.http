@@ -1,0 +1,29 @@
+@RestauranteApi_HostAddress = http://localhost:5065
+
+GET {{RestauranteApi_HostAddress}}/api/zones
+Accept: application/json
+
+###
+
+GET {{RestauranteApi_HostAddress}}/api/tables/available?date=2026-06-20&time=13:00:00&capacity=2
+Accept: application/json
+
+###
+
+GET {{RestauranteApi_HostAddress}}/openapi/v1.json
+Accept: application/json
+
+###
+
+GET {{RestauranteApi_HostAddress}}/health
+Accept: application/json
+
+###
+
+POST {{RestauranteApi_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
