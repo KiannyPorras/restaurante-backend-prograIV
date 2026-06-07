@@ -97,6 +97,7 @@ namespace RestauranteApi.Service.Implementations
             if (startTime >= endTime) throw new Exception("La hora de inicio debe ser anterior a la hora de fin.");
 
             var overlaps = _RestauranteApiDbContext.Turns
+                .AsEnumerable()
                 .Any(t => t.IsActive
                        && t.Id != excludedTurnId
                        && t.StartTime < endTime
